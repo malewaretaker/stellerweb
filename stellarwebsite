@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Stellar - The Best Roblox External</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elevate roblox with stellar External: powerful, secure, and supported.">
+    <meta name="author" content="Stellar">
+    <meta property="og:title" content="Stellar - the BEST roblox external">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Elevate roblox with stellar External: powerful, secure, and supported.">
+    <meta property="og:image" content="../../Santoware.org/Santoware.png">
+
+    <link rel="stylesheet" href="../../Santoware.org/style.css">
+    <link rel="canonical" href="https://Santoware.org/">
+    <style>
+        /* Ensure the video background covers the entire viewport */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Ensure it is behind all other content */
+            overflow: hidden;
+        }
+
+        /* Style for content sections */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            padding: 0 20px; /* Ensure content does not overlap */
+        }
+
+        header, section, footer {
+            position: relative;
+            z-index: 1; /* Ensure these elements are above the video background */
+        }
+    </style>
+</head>
+<body>
+    <!-- Background video -->
+    <video class="video-background" id="background-video" loop>
+        <source src="../../Santoware.org/final.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Content wrapper -->
+    <div class="content-wrapper">
+        <header class="header">
+            <a href="#">
+                <svg class="main_logo">
+                    <text x="50%" y="50%" dy=".35em" text-anchor="middle">Stellar</text>
+                </svg>
+            </a>
+        </header>
+        <section class="hero_section_main">
+            <div class="hero_content">
+                <span class="min_title_hero back">EXCELLENT</span>
+                <h1 class="big_title_hero back">Stellar External</h1>
+                <p class="hero_desc">Are you tired of using shit externals?</p>
+                <div class="hero_buttons">
+                    <a href="https://raw.githubusercontent.com/malewaretaker/stellar/main/stellar.exe" class="hero_dw"> Download </a>
+                    <a href="https://discord.com/invite/stellarblx" class="hero_jd"> Join Discord </a>
+                </div>
+            </div>
+        </section>
+        <!-- Other sections remain unchanged -->
+        <!-- Include additional sections here -->
+        <footer class="footer">
+            <p class="copy_footer">© 2024 Stellar External</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('background-video');
+            
+            // Try to play the video with sound on page load
+            const playVideo = () => {
+                video.muted = false;
+                video.play().catch((error) => {
+                    // If autoplay with sound fails, mute and play
+                    video.muted = false;
+                    video.play();
+                });
+            };
+            
+            // Attempt to simulate a user interaction
+            window.addEventListener('click', playVideo, { once: true });
+            
+            // Alternatively, try to play on touch events (for mobile)
+            window.addEventListener('touchstart', playVideo, { once: true });
+
+            // Also try to play on page visibility change
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'visible') {
+                    playVideo();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
